@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import Betslip from "../../Pages/Sports/Common/Betslip/Betslip";
 import SportsHeader from "../../Pages/Sports/SportsHeader/SportsHeader";
 import PageFooter from "../Footer/PageFooter";

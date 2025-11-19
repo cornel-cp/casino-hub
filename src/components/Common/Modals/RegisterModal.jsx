@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Register from "../../LoginAndRgister/Register";
 
 //model images
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import Image from "../../../assets/images/IMAGE.jpg";
 import LOGO1 from "../../../assets/images/LOGO.png";
 import Login from "../../LoginAndRgister/Login";

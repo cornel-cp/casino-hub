@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { ReactComponent as PORTFOLIO_IMG } from "../../../assets/images/Frame (13).svg";
 import CloseButtonModal from "../CloseButtonModal";
 import Modal from "../Modal";

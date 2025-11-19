@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { StyledBitcoinContent } from "./styles";
 
 const EthereumContent = ({ handleBack }) => {

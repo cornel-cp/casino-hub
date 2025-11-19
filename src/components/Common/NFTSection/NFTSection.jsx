@@ -5,7 +5,7 @@ import { StyledNFTSection } from "./styles";
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import Button from "../Buttons/Button";
 import NotFound from "../NotFound/NotFound";
 

@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { DATA_CONTENT } from "../../../assets/MockData/mockData";
 import { ReactComponent as SEARCH_ICON } from "../../../assets/images/navbar-search-icon.svg";
 import Button from "../../Common/Buttons/Button";

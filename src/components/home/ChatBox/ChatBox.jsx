@@ -1,7 +1,7 @@
 //assets
 import { useContext, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { ReactComponent as MSG } from "../../../assets/images/Frame (31).svg";
 import { ReactComponent as CANDLE_ICON } from "../../../assets/images/Frame (32).svg";
 import { ReactComponent as ARROW_DOWN } from "../../../assets/images/Frame (33).svg";

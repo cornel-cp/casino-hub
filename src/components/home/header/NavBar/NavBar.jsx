@@ -8,7 +8,7 @@ import SMALL_LOGO_NO_BG from "../../../../assets/LOGO Gamblify/LOGO PNG.png";
 import { ReactComponent as MESSAGE_ICON } from "../../../../assets/images/message.svg";
 import ChatBox from "../../ChatBox/ChatBox";
 
-import { AppContext } from "../../../../AppContext";
+import { AppContext } from "../../../../context/AppContext";
 import Button from "../../../Common/Buttons/Button";
 import RegisterModal from "../../../Common/Modals/RegisterModal";
 import AccountButton from "../AccountButton/AccountButton";

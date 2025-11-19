@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../../../AppContext";
+import { AppContext } from "../../../../context/AppContext";
 import { ReactComponent as MESSAGE_ICON } from "../../../../assets/images/message.svg";
 import Button from "../../../Common/Buttons/Button";
 import CashierModal from "../../../Modals/CashierModals/CashierModal";

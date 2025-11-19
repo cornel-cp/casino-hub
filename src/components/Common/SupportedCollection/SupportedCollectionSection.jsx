@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { StyledSupportedCollectionSection } from "./styles";
 import SupportedCollectionCard from "./SupportedCollectionCard";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 
 const SupportedCollectionSection = () => {
   const { isSidebarOpen, isChatBoxOpen } = useContext(AppContext);

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { ReactComponent as AK_ORIGINALS } from "../../../assets/images/AK Originals.svg";
 import { ReactComponent as BONUS_BATTLES } from "../../../assets/images/Bonus_Battle.svg";
 import { ReactComponent as CASINO_IMG } from "../../../assets/images/Frame (9).svg";

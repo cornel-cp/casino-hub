@@ -14,7 +14,7 @@ import {
 } from "./StyledTopMatch";
 import TeamCard from "./TeamCard";
 
-import { AppContext } from "../../../../../../AppContext";
+import { AppContext } from "../../../../../../context/AppContext";
 import { ReactComponent as ARROW_DOWN } from "../../../../../../assets/images/Arrow-Down.svg";
 import { ReactComponent as ARROW_LEFT } from "../../../../../../assets/images/arrow-left-container.svg";
 import { ReactComponent as ARROW_RIGHT } from "../../../../../../assets/images/arrow-right-container.svg";

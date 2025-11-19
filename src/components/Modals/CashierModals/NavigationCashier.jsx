@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { StyledNavigationCashier } from "./styles";
 const options = ["Deposit", "Withdraw", "Coupons", "Referrals"];
 

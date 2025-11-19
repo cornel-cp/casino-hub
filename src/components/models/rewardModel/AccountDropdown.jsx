@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { ACCOUNT_DROPDOWN_OPTIONS } from "../../../assets/MockData/mockData";
 import { ReactComponent as OUT } from "../../../assets/modelImages/Frame (12).svg";
 import { StyledAccountDropdown } from "./styles";

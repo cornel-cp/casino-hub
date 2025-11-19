@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { AppContext } from "../../../../../AppContext";
+import { AppContext } from "../../../../../context/AppContext";
 import SportCard from "../SportCard/SportCard";
 import SportsNavigation from "../SportsNavigation/SportsNavigation";
 import NoSportFound from "./NoSportFound";

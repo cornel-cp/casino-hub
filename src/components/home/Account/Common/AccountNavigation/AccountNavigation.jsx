@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import { AppContext } from "../../../../../AppContext";
+import { AppContext } from "../../../../../context/AppContext";
 import { ReactComponent as USER_COLORED } from "../../../../../assets/images/Frame (44).svg";
 import { ReactComponent as FLOW } from "../../../../../assets/images/Frame (49).svg";
 import { ReactComponent as BUGER } from "../../../../../assets/images/Frame (50).svg";

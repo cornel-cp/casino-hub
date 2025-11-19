@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import * as Yup from "yup";
 
 //assets
-import { AppContext } from "../../AppContext";
+import { AppContext } from "../../context/AppContext";
 import { ReactComponent as STEAM } from "../../assets/images/Frame (22).svg";
 import { ReactComponent as TWITCH } from "../../assets/images/Frame (23).svg";
 import { ReactComponent as METAMASK } from "../../assets/images/Frame (24).svg";

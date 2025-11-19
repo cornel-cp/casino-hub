@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 //assets
 import { ReactComponent as IMG1 } from "../../../assets/images/Frame (28).svg";
 
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import SectionHeader from "../../Common/SectionHeader/SectionHeader";
 import GameInfoItem from "../../Common/TableView/GameInfoItem";
 import { StyleTableView } from "../../Common/TableView/styles";

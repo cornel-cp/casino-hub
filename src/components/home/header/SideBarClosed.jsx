@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { SECTIONS } from "../../../assets/MockData/mockData";
 import { ReactComponent as COLLAPSE_IMG } from "../../../assets/images/Frame (34).svg";
 import MyPopover from "../../Common/Popover/MyPopover";

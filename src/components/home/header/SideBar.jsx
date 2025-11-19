@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ReactComponent as BALANCE_IMG } from "../../../assets/images/AK BALANCE.svg";
 
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { SECTIONS } from "../../../assets/MockData/mockData";
 import { ReactComponent as VISA_IMG } from "../../../assets/images/Frame (18).svg";
 import { ReactComponent as DEBIT_IMG } from "../../../assets/images/Frame (19).svg";

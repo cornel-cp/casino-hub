@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { AppContext } from "../../../../../AppContext";
+import { AppContext } from "../../../../../context/AppContext";
 import { optionsSport } from "../../SportsHeader/SportsHeader";
 import FireIcon from "./FireIcon";
 import { StyledHeaderDropdown } from "./styles";

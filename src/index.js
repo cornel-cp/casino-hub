@@ -1,19 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { AppProvider } from "./AppContext";
+import { AppProvider } from "./context/AppContext";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
+import { AuthProvider } from "./context/AuthContext";
 /* global gtag */
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AppProvider>
-    <App />
+    <AuthProvider>
+      <App />
+    </AuthProvider>
   </AppProvider>
 );
 
-function sendToGoogleAnalytics({name, delta, value, id}) {
+function sendToGoogleAnalytics({ name, delta, value, id }) {
   // Assumes the global `gtag()` function exists, see:
   // https://developers.google.com/analytics/devguides/collection/ga4
   window.gtag('event', name, {

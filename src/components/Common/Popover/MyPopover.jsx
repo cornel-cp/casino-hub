@@ -1,7 +1,7 @@
 import { Popover } from "@headlessui/react";
 import React, { useContext, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import CryptoFuturesCoins from "../CryptoFuturesCoins/CryptoFuturesCoins";
 import { StyledPopover } from "./styles";
 

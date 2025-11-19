@@ -7,7 +7,7 @@ import HomeAppBar from "./components/home/header/AppBar";
 
 // deposit section models
 import { useContext } from "react";
-import { AppContext } from "./AppContext";
+import { AppContext } from "./context/AppContext";
 import NFTDetails from "./components/Common/NFTDetails/NFTDetails";
 import ScrollToTop from "./components/Common/ScrollToTop";
 import SupportButton from "./components/Common/SupportButton/SupportButton";

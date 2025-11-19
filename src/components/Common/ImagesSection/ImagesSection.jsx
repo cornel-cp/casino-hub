@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import useCardsLoadMore from "../../../hooks/useCardsLoadMore";
 import Button from "../Buttons/Button";
 import HoverableImage from "../HoverableImage/HoverableImage";

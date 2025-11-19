@@ -8,7 +8,7 @@ import {
 } from "../../../assets/MockData/dropdownsData";
 
 import { useLocation, useNavigate } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import Dropdown from "../Dropdowns/Dropdown";
 import SwitchToggle from "../SwitchToggle/SwitchToggle";
 import { SearchInput, StyledSearchFilters } from "./styles";

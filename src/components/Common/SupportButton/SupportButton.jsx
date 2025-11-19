@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 import { ReactComponent as SUPPORT } from "../../../assets/images/Frame (65).svg";
 import { StyledSupportButton } from "./styles";
 

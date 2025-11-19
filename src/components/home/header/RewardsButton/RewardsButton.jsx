@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import { AppContext } from "../../../../AppContext";
-import { ReactComponent as ARROW_DOWN } from "../../../../assets/images/Frame (33).svg";
-import TREASURE from "../../../../assets/images/IMAGE (44).png";
-import Model1 from "../../../models/rewardModel/Model1";
+import { ReactComponent as ARROW_DOWN } from "@/assets/images/Frame (33).svg";
+import TREASURE from "@/assets/images/IMAGE (44).png";
+import Model1 from "@/components/models/rewardModel/Model1";
+import { AppContext } from "@/context/AppContext";
 
 const RewardsButton = () => {
   const { openDropdown, toggleDropdown, isTabletScreen } =

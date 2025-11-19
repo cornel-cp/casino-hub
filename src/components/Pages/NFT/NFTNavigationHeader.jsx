@@ -4,7 +4,7 @@ import {
   StyledNavHeaderBtn,
   StyledNavigationHeader,
 } from "../../Common/NavigationHeader/styles";
-import { AppContext } from "../../../AppContext";
+import { AppContext } from "../../../context/AppContext";
 
 const NFTNavigationHeader = (props) => {
   const { selectedOption, updateSelectedOption } = useContext(AppContext);

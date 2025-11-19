@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { AppContext } from "../../../../AppContext";
+import { AppContext } from "../../../../context/AppContext";
 //assets
 import HEXAGON from "../../../../assets/images/IMAGE (46).png";
 import { ReactComponent as USER } from "../../../../assets/modelImages/Frame (6).svg";

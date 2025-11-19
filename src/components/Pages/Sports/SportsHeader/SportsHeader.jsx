@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import { StyledSportNavOption, StyledSportsHeader } from "./StyledSportsHeader";
 
 import { Link, useLocation } from "react-router-dom";
-import { AppContext } from "../../../../AppContext";
+import { AppContext } from "../../../../context/AppContext";
 import { ReactComponent as ARROW_DOWN } from "../../../../assets/images/Arrow-Down.svg";
 import { ReactComponent as MY_BETS } from "../../../../assets/images/MyBets.svg";
 import { ReactComponent as AMERICAN_FOOTBALL } from "../../../../assets/images/american-football.svg";
