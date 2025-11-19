@@ -20,6 +20,7 @@
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-toastify": "^11.0.5",
     "slick-carousel": "^1.8.1",
     "styled-components": "^6.0.8",
     "web-vitals": "^2.1.4",
