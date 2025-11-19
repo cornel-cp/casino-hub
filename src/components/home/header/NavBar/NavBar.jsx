@@ -18,16 +18,18 @@ import SearchModal from "../../../Modals/SearchModal/SearchModal";
 import RewardsButton from "../RewardsButton/RewardsButton";
 import TotalMoneyContainer from "../TotalMoneyContainer";
 import { StyledNavBar } from "./styles";
+import { useAuth } from "@/context/AuthContext";
 
 const NavBar = () => {
   const {
     isChatBoxOpen,
-    isLoggedIn,
     isMobileScreen,
     isTabletScreen,
     updateChatBox,
     updateLoggedIn,
   } = useContext(AppContext);
+
+  const { user } = useAuth();
 
   return (
     <StyledNavBar>
@@ -55,7 +57,7 @@ const NavBar = () => {
             />
           </Link>
           {/* Rewards Button */}
-          {isLoggedIn && (
+          {user && (
             <div className="money-container">
               {isTabletScreen && !isMobileScreen ? (
                 <TotalMoneyContainer money="$0.00" />
@@ -65,7 +67,7 @@ const NavBar = () => {
           )}
         </div>
 
-        {isLoggedIn && (
+        {user && (
           <>
             {/* Coins / Cashier / Buy Crypto Section */}
             <div
@@ -89,7 +91,7 @@ const NavBar = () => {
         )}
 
         <div style={{ display: "flex", alignItems: "center" }}>
-          {!isLoggedIn && (
+          {!user && (
             <>
               <RegisterModal modalOption="login" />
               <RegisterModal modalOption="register" />
@@ -99,7 +101,7 @@ const NavBar = () => {
           {!isTabletScreen && (
             <div style={{ display: "flex" }}>
               {/* Account Section */}
-              {isLoggedIn && <AccountButton />}
+              {user && <AccountButton />}
 
               <SearchModal />
               {isChatBoxOpen === false ? (

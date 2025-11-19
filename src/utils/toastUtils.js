@@ -84,3 +84,24 @@ export const showWarningToast = (message, timeout) => {
     },
   });
 };
+
+// Simple global toast function - defaults to success/info style
+export const showToast = (message, type = "success", timeout) => {
+  const toastType = type === "error" ? "caution" : type === "warning" ? "warning" : "success";
+  toast(renderCustomToast(toastType, message), {
+    position: "top-center",
+    autoClose: timeout || 1500,
+    hideProgressBar: true,
+    closeOnClick: false,
+    closeButton: false,
+    pauseOnHover: false,
+    draggable: false,
+    theme: "light",
+    className: "justify-center items-center",
+    style: {
+      backgroundColor: "transparent",
+      border: "none",
+      boxShadow: "none",
+    },
+  });
+};

@@ -73,29 +73,15 @@ apiClient.interceptors.response.use(
         return Promise.reject(new Error('Token exchange failed'))
       }
 
-      // For other endpoints, clear tokens and redirect to home page
-      console.log('🔐 Authentication expired, clearing tokens and redirecting to home page')
-      if (typeof window !== 'undefined') {
-        // Set flag to prevent multiple logout calls
-        sessionStorage.setItem('logout_in_progress', 'true')
-        
-        // Clear stored tokens first
-        try {
-          await apiClient.post('/auth/logout')
-        } catch (logoutError) {
-          // Ignore logout errors
-        }
-        // Clear localStorage/sessionStorage if any
-        localStorage.removeItem('supabase.auth.token')
-        sessionStorage.clear()
-        
-        // Set a flag to prevent infinite loops
-        sessionStorage.setItem('auth_redirect_flag', 'true')
-        
-        // Redirect to home page
-        window.location.href = '/'
-      }
-      return Promise.reject(new Error('Authentication expired'))
+      // For other endpoints, don't automatically redirect
+      // Let the components handle authentication errors appropriately
+      // This prevents redirecting authenticated users who might just have a temporary token issue
+      console.log('🔐 API returned 401 for endpoint:', url)
+      console.log('🔍 Current path:', typeof window !== 'undefined' ? window.location.pathname : 'N/A')
+      
+      // Just reject the error - let the calling component handle it
+      // Components can check auth status and redirect if needed
+      return Promise.reject(new Error('Not authenticated'))
     }
 
     return Promise.reject(error)

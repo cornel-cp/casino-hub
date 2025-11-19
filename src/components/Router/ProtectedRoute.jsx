@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { AppContext } from "../../context/AppContext";
+import { showErrorToast } from "@/utils/toastUtils";
+import { useAuth } from "@/context/AuthContext";
 
 const ProtectedRoute = ({ children }) => {
-  const { isLoggedIn } = useContext(AppContext);
+  const { user } = useAuth()
 
-  if (!isLoggedIn) {
+  if (!user) {
+    showErrorToast("You must be logged in to access this page");
     return <Navigate to="/" replace />;
   }
 

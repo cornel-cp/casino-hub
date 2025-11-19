@@ -7,6 +7,7 @@ import { ReactComponent as USER } from "../../../../assets/modelImages/Frame (6)
 import Button from "../../../Common/Buttons/Button";
 import AccountDropdown from "../../../models/rewardModel/AccountDropdown";
 import { StyleAccountButton } from "./StyledAccountButton";
+import { useAuth } from "@/context/AuthContext";
 
 //model assetss
 
@@ -15,6 +16,7 @@ import { StyleAccountButton } from "./StyledAccountButton";
 const AccountButton = () => {
   const { openDropdown, toggleDropdown, isTabletScreen } =
     useContext(AppContext);
+  const { user } = useAuth();
 
   const handleBtnClick = () => {
     toggleDropdown((prev) => (prev ? "" : "account"));
@@ -29,7 +31,7 @@ const AccountButton = () => {
       ) : (
         <Button className="account-button" onClick={handleBtnClick}>
           <div size="30" class="rank-icon">
-            <img src={HEXAGON} alt="" scale="0.96" />
+            <img src={user?.avatar || HEXAGON} alt="" scale="0.96" />
           </div>
           <div style={{ margin: "-2px 10px 0px 1px", minWidth: "50px" }}>
             <div class="account-text">Account</div>

@@ -15,18 +15,11 @@ import { ReactComponent as CHECKMARK } from "../../../../assets/images/checkmark
 import SwitchToggle from "../../../Common/SwitchToggle/SwitchToggle";
 import AccountPageTitle from "../Common/AccountPageTitle";
 import UserContainer from "./UserContainer";
+import { useAuth } from "@/context/AuthContext";
+import { showToast } from "@/utils/toastUtils";
 
 const Profile = () => {
-  const [toastMessage, setToastMessage] = useState("");
-
-  const displayToast = (message) => {
-    setToastMessage(message);
-
-    // Clear the toast after a delay (e.g., 3000ms or 3 seconds)
-    setTimeout(() => {
-      setToastMessage("");
-    }, 3000);
-  };
+  const { user } = useAuth();
 
   const [useRollbotAsAvatar, setUseRollbotAsAvatar] = useState(false);
   const [isPrivateProfile, setIsPrivateProfile] = useState(false);
@@ -46,7 +39,7 @@ const Profile = () => {
     validationSchema: usernameValidationSchema,
     onSubmit: (values, { resetForm }) => {
       // Handle form submission logic here
-      displayToast("Username changed successfully.");
+      showToast("Username changed successfully.");
       resetForm();
     },
   });
@@ -68,7 +61,7 @@ const Profile = () => {
                 <input
                   type="text"
                   name="name"
-                  placeholder="TirlaP"
+                  placeholder={user?.displayName ?? user?.username}
                   id="rollbit-field-62399"
                   value={formik.values.name}
                   onChange={formik.handleChange}
@@ -145,7 +138,6 @@ const Profile = () => {
           <SocialMediaButton socialIcon={METAMASK} socialName={"Metamask"} />
         </div>
       </div>
-      {toastMessage && <div className="toast">{toastMessage}</div>}
     </StyleProfile>
   );
 };
