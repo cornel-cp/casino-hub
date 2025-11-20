@@ -57,7 +57,7 @@ const NavBar = () => {
             />
           </Link>
           {/* Rewards Button */}
-          {user && (
+          {user?.profile && (
             <div className="money-container">
               {isTabletScreen && !isMobileScreen ? (
                 <TotalMoneyContainer money="$0.00" />
@@ -67,7 +67,7 @@ const NavBar = () => {
           )}
         </div>
 
-        {user && (
+        {user?.profile && (
           <>
             {/* Coins / Cashier / Buy Crypto Section */}
             <div
@@ -91,7 +91,7 @@ const NavBar = () => {
         )}
 
         <div style={{ display: "flex", alignItems: "center" }}>
-          {!user && (
+          {!user?.profile && (
             <>
               <RegisterModal modalOption="login" />
               <RegisterModal modalOption="register" />
@@ -101,7 +101,7 @@ const NavBar = () => {
           {!isTabletScreen && (
             <div style={{ display: "flex" }}>
               {/* Account Section */}
-              {user && <AccountButton />}
+              {user?.profile && <AccountButton />}
 
               <SearchModal />
               {isChatBoxOpen === false ? (

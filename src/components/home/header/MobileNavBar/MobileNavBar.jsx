@@ -6,6 +6,7 @@ import CashierModal from "../../../Modals/CashierModals/CashierModal";
 import SearchModal from "../../../Modals/SearchModal/SearchModal";
 import AccountButton from "../AccountButton/AccountButton";
 import { StyledMobileNavBar } from "./styles";
+import { useAuth } from "@/context/AuthContext";
 
 const MobileNavBar = () => {
   const {
@@ -15,6 +16,8 @@ const MobileNavBar = () => {
     updateSidebar,
     updateLoggedIn,
   } = useContext(AppContext);
+
+  const { user } = useAuth();
 
   return (
     <StyledMobileNavBar>
@@ -32,7 +35,7 @@ const MobileNavBar = () => {
             <path d="m464.883 353.467h-417.766c-25.98 0-47.117 21.137-47.117 47.149 0 25.98 21.137 47.117 47.117 47.117h417.766c25.98 0 47.117-21.137 47.117-47.117 0-26.012-21.137-47.149-47.117-47.149z"></path>
           </svg>
         </button>
-        {isLoggedIn && (
+        {user?.profile && (
           <>
             <AccountButton />
             <CashierModal button={"Cashier"} />
